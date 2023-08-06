@@ -1,0 +1,15 @@
+{
+	"nodes":[
+		{"type":"text","text":"Soul Cat ERC 721\n\nAdopt - \nChat - \nAdventure - (Layer Zero or OP Stack)\nPlay - OP Stack\n","id":"5cd15a6bdf7dc6a0","x":-380,"y":-180,"width":250,"height":260},
+		{"type":"text","text":"tokenURI:\nipfs\n\nanimation_url\n","id":"330cb26ebede90b6","x":-20,"y":-320,"width":320,"height":140},
+		{"type":"text","text":"","id":"58bf438005d2f32e","x":-392,"y":200,"width":275,"height":50},
+		{"type":"text","text":"ERC 721\nLOVE\n\n","id":"c451101116d75120","x":-505,"y":360,"width":250,"height":180},
+		{"type":"text","text":"ERC 1155\nCRRK\n\nCombine\n","id":"26d30cd3169e71be","x":-242,"y":360,"width":250,"height":180}
+	],
+	"edges":[
+		{"id":"5a43c305cdc127a8","fromNode":"5cd15a6bdf7dc6a0","fromSide":"right","toNode":"330cb26ebede90b6","toSide":"left"},
+		{"id":"f7cf3d6f14cb807e","fromNode":"5cd15a6bdf7dc6a0","fromSide":"bottom","toNode":"58bf438005d2f32e","toSide":"top","label":"ERC 6551"},
+		{"id":"33de08c161287428","fromNode":"58bf438005d2f32e","fromSide":"bottom","toNode":"c451101116d75120","toSide":"top"},
+		{"id":"620d5cebcf08bcec","fromNode":"58bf438005d2f32e","fromSide":"bottom","toNode":"26d30cd3169e71be","toSide":"top"}
+	]
+}

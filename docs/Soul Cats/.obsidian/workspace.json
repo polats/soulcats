@@ -1,0 +1,156 @@
+{
+  "main": {
+    "id": "c69a47370934e53f",
+    "type": "split",
+    "children": [
+      {
+        "id": "112f26685e270db8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fd006a3ab144bfdc",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Smart Contract Diagram.canvas",
+                "viewState": {
+                  "x": -151.3750315208319,
+                  "y": 146.56449174585637,
+                  "zoom": -0.3333333333333333
+                }
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "0c509bd59fcd292c",
+    "type": "split",
+    "children": [
+      {
+        "id": "d0e58f92ab810455",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "483ad78bd9d2b888",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "9ce1e9c2ecdee5d6",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "39a00fdf67a97643",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "698ef9dee4b91540",
+    "type": "split",
+    "children": [
+      {
+        "id": "1314fb61c5ec7ece",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "dbfa2e7b18d09eaa",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Smart Contract Diagram.canvas",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "fa863fd1e9083d18",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Smart Contract Diagram.canvas",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "56f445908d4c2081",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "849f571333cd879e",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Smart Contract Diagram.canvas"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "fd006a3ab144bfdc",
+  "lastOpenFiles": [
+    "Smart Contract Diagram.canvas"
+  ]
+}
