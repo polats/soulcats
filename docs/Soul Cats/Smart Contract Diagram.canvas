@@ -4,12 +4,14 @@
 		{"type":"text","text":"tokenURI:\nipfs\n\nanimation_url\n","id":"330cb26ebede90b6","x":-20,"y":-320,"width":320,"height":140},
 		{"type":"text","text":"","id":"58bf438005d2f32e","x":-392,"y":200,"width":275,"height":50},
 		{"type":"text","text":"ERC 721\nLOVE\n\n","id":"c451101116d75120","x":-505,"y":360,"width":250,"height":180},
-		{"type":"text","text":"ERC 1155\nCRRK\n\nCombine\n","id":"26d30cd3169e71be","x":-242,"y":360,"width":250,"height":180}
+		{"type":"text","text":"ERC 1155\nCRRK\n\nCombine\n","id":"26d30cd3169e71be","x":-242,"y":360,"width":250,"height":180},
+		{"type":"text","text":"Adopt\n\nLazyMint:\nRandomly generate image and properties\nUpload to IPFS\n\nClaim:\nAlso mints ERC20","id":"a0ba8bfdca771bf5","x":50,"y":-50,"width":350,"height":275}
 	],
 	"edges":[
 		{"id":"5a43c305cdc127a8","fromNode":"5cd15a6bdf7dc6a0","fromSide":"right","toNode":"330cb26ebede90b6","toSide":"left"},
 		{"id":"f7cf3d6f14cb807e","fromNode":"5cd15a6bdf7dc6a0","fromSide":"bottom","toNode":"58bf438005d2f32e","toSide":"top","label":"ERC 6551"},
 		{"id":"33de08c161287428","fromNode":"58bf438005d2f32e","fromSide":"bottom","toNode":"c451101116d75120","toSide":"top"},
-		{"id":"620d5cebcf08bcec","fromNode":"58bf438005d2f32e","fromSide":"bottom","toNode":"26d30cd3169e71be","toSide":"top"}
+		{"id":"620d5cebcf08bcec","fromNode":"58bf438005d2f32e","fromSide":"bottom","toNode":"26d30cd3169e71be","toSide":"top"},
+		{"id":"010653c75b257d91","fromNode":"5cd15a6bdf7dc6a0","fromSide":"right","toNode":"a0ba8bfdca771bf5","toSide":"left"}
 	]
 }

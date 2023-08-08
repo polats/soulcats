@@ -34,7 +34,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -101,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Smart Contract Diagram.canvas",
+                "file": "Backlog.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Smart Contract Diagram.canvas",
+                "file": "Backlog.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Smart Contract Diagram.canvas"
+                "file": "Backlog.md"
               }
             }
           }
@@ -162,10 +163,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "fd006a3ab144bfdc",
+  "active": "fa0ece7f0413a216",
   "lastOpenFiles": [
-    "Backlog.md",
     "Smart Contract Diagram.canvas",
+    "Backlog.md",
     "2023-08-06.md"
   ]
 }
