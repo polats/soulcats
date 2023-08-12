@@ -8,11 +8,11 @@ module.exports = {
     themes: [
       {
         scaffoldEth: {
-          primary: "#93BBFB",
+          primary: "#FF61CF", // Neon Pink
           "primary-content": "#212638",
-          secondary: "#DAE8FF",
+          secondary: "#25D2E2", // Turquoise
           "secondary-content": "#212638",
-          accent: "#93BBFB",
+          accent: "#D383FF", // Light Purple
           "accent-content": "#212638",
           neutral: "#212638",
           "neutral-content": "#ffffff",
@@ -34,11 +34,11 @@ module.exports = {
       },
       {
         scaffoldEthDark: {
-          primary: "#212638",
+          primary: "#25D2E2", // Turquoise
           "primary-content": "#F9FBFF",
-          secondary: "#323f61",
+          secondary: "#FF61CF", // Neon Pink
           "secondary-content": "#F9FBFF",
-          accent: "#4969A6",
+          accent: "#D383FF", // Light Purple
           "accent-content": "#F9FBFF",
           neutral: "#F9FBFF",
           "neutral-content": "#385183",
@@ -61,11 +61,11 @@ module.exports = {
       },
       {
         exampleUi: {
-          primary: "#000000",
+          primary: "#D383FF", // Light Purple
           "primary-content": "#ffffff",
-          secondary: "#FF6644",
+          secondary: "#25D2E2", // Turquoise
           "secondary-content": "#212638",
-          accent: "#93BBFB",
+          accent: "#FF61CF", // Neon Pink
           "accent-content": "#212638",
           neutral: "#f3f3f3",
           "neutral-content": "#212638",
@@ -109,11 +109,21 @@ module.exports = {
           "0%, 100%": { transform: "scale(1, 1)" },
           "50%": { transform: "scale(1.1, 1.1)" },
         },
+        bouncycat: {
+          "0%":   { transform: "scale(1,1)      translateY(0)" },
+          "2.5%":  { transform: "scale(1.1,.9)   translateY(0)" },
+          "7.5%":  { transform: "scale(.9,1.1)   translateY(-50px)" },
+          "12.5%":  { transform: "scale(1.05,.95) translateY(0)" },
+          "14%":  { transform: "scale(1,1)      translateY(-7px)" },
+          "16%":  { transform: "scale(1,1)      translateY(0)" },
+          "25%": { transform: "scale(1,1)      translateY(0)" }          
+        }
       },
       animation: {
         grow: "grow 5s linear infinite",
         "pulse-fast": "pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite",
         zoom: "zoom 1s ease infinite",
+        bouncycat: "bouncycat 8s infinite"
       },
     },
   },
