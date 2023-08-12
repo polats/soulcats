@@ -26,8 +26,8 @@ const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEn
     // Contract constructor arguments
     args: [
       deployer,       // _defaultAdmin
-      "TestERC721",   // _name
-      "TST",          // _symbol
+      "💖LOVE💖",   // _name
+      "💖",          // _symbol
       deployer,       // _royaltyRecipient
       0,              // _royaltyBps
       deployer        // _primarySaleRecipient
