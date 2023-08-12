@@ -29,7 +29,7 @@ const Home: NextPage = () => {
                 
                 Don{"'"}t miss your chance to <b>Adopt a SoulCat</b> when the{" "} 
                 <b className="rainbow-text">Portal</b> is active!<br/><br/>
-                Only a few cross over every time. Each wallet can only adopt a SoulCat once.
+                Only a few SoulCats cross over every time.
               </p>
             </div>
             <div className="flex flex-col bg-base-100 px-10 py-10 text-center items-center max-w-xs rounded-3xl">
@@ -49,7 +49,7 @@ const Home: NextPage = () => {
               <p>
                 Collecting all 4 gifts will allow you to create <br/>
                 💖<b className="love-text">LOVE</b>💖.<br/><br/>
-                💖<b className="love-text">LOVE</b>💖 can be used to adopt a new SoulCat{" "} 
+                💖<b className="love-text">LOVE</b>💖 can be used to adopt a new SoulCat {" "} 
                 <b>even if the <b className="rainbow-text">Portal</b> is closed</b>.
               </p>
             </div>
