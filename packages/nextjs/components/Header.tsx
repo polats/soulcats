@@ -45,6 +45,7 @@ export const Header = () => {
           Debug Contracts
         </NavLink>
       </li>
+      {/*
       <li>
         <NavLink href="/example-ui">
           <SparklesIcon className="h-4 w-4" />
@@ -57,6 +58,7 @@ export const Header = () => {
           Block Explorer
         </NavLink>
       </li>
+    */}
     </>
   );
 
