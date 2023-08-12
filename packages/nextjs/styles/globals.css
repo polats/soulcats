@@ -30,3 +30,41 @@ p {
 .btn.btn-ghost {
   @apply shadow-none;
 }
+
+.rainbow-text {
+  background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: rainbow 5s linear infinite;
+}
+
+.love-text {
+  background-image: linear-gradient(to left, #FFC0CB, #FFB6C1, #FF69B4, #FF1493, #FF4500, #FF0000);
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.care {
+  color: #FF6AD5
+}
+
+.respect {
+  color: #00D9FF
+}
+
+.responsibility {
+  color: #A57CFF
+}
+
+.knowledge {
+  color: hsl(24, 100%, 69%)
+}
+
+@keyframes rainbow {
+  0% {background-position: 200% 0;}
+  100% {background-position: -200% 0;}
+}
