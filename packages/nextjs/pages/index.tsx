@@ -1,4 +1,3 @@
-import Link from "next/link";
 import type { NextPage } from "next";
 import { BoltIcon, GiftIcon, HeartIcon } from "@heroicons/react/24/outline";
 import { MetaHeader } from "~~/components/MetaHeader";
@@ -28,7 +27,7 @@ const Home: NextPage = () => {
               <BoltIcon className="h-8 w-8 fill-secondary" />
               <p>
                 
-                Don't miss your chance to <b>Adopt a SoulCat</b> when the{" "} 
+                Don{"'"}t miss your chance to <b>Adopt a SoulCat</b> when the{" "} 
                 <b className="rainbow-text">Portal</b> is active!<br/><br/>
                 Only a few cross over every time. Each wallet can only adopt a SoulCat once.
               </p>
