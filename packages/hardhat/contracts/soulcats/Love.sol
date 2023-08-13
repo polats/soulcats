@@ -10,6 +10,7 @@ import "../extension/Multicall.sol";
 import "../extension/Ownable.sol";
 import "../extension/PrimarySale.sol";
 import "../extension/interface/IBurnableERC20.sol";
+import "../extension/interface/IMintableERC20.sol";
 
 import "../lib/CurrencyTransferLib.sol";
 import "./SoulCatsDropSinglePhase.sol";
@@ -33,7 +34,7 @@ import "./SoulCatsDropSinglePhase.sol";
  *
  */
 
-contract Love is ContractMetadata, Multicall, Ownable, ERC20Permit, PrimarySale, SoulCatsDropSinglePhase, IBurnableERC20 {
+contract Love is ContractMetadata, Multicall, Ownable, ERC20Permit, PrimarySale, SoulCatsDropSinglePhase, IMintableERC20, IBurnableERC20 {
     address private _careAddrress;
     address private _respectAddrress;
     address private _responsibilityAddrress;
@@ -65,6 +66,21 @@ contract Love is ContractMetadata, Multicall, Ownable, ERC20Permit, PrimarySale,
     /*//////////////////////////////////////////////////////////////
                             ERC20 logic
     //////////////////////////////////////////////////////////////*/
+
+    /**
+     *  @notice          Lets an authorized address mint tokens to a recipient.
+     *  @dev             The logic in the `_canMint` function determines whether the caller is authorized to mint tokens.
+     *
+     *  @param _to       The recipient of the tokens to mint.
+     *  @param _amount   Quantity of tokens to mint.
+     */
+    function mintTo(address _to, uint256 _amount) public virtual {
+        require(_canMint(), "Not authorized to mint.");
+        require(_amount != 0, "Minting zero tokens.");
+
+        _mint(_to, _amount);
+    }
+
 
     /**
      *  @notice          Lets an owner a given amount of their tokens.

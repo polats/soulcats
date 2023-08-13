@@ -31,7 +31,10 @@ interface ISoulCatsClaimCondition {
      *
      *  @param pricePerToken                  The price required to pay per token claimed.
      *
-     *  @param currency                       The currency in which the `pricePerToken` must be paid.
+     *  @param currency1                       The currency in which the `pricePerToken` must be paid.
+     *  @param currency2                       The currency in which the `pricePerToken` must be paid.
+     *  @param currency3                       The currency in which the `pricePerToken` must be paid.
+     *  @param currency4                       The currency in which the `pricePerToken` must be paid.
      *
      *  @param metadata                       Claim condition metadata.
      */

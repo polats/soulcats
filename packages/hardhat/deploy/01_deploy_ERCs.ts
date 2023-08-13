@@ -1,6 +1,9 @@
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 import { DeployFunction } from "hardhat-deploy/types";
+import { PromiseOrValue } from "../typechain-types/common";
 import {
+  BigNumberish,
+  BytesLike,
   BigNumber
 } from "ethers";
 
@@ -93,9 +96,65 @@ const deployAndInitializeERCContracts: DeployFunction = async function (hre: Har
 
   const loveContract = await hre.ethers.getContract("Love", deployer);
 
- 
+  const UINT256_MAX = 
+  BigNumber.from("115792089237316195423570985008687907853269984665640564039457584007913129639935");
 
+  // add LOVE claim condition
+  const loveClaimCondition = {
+    startTimestamp: 0, 
+    maxClaimableSupply: UINT256_MAX, 
+    supplyClaimed: 0,
+    quantityLimitPerWallet: UINT256_MAX, 
+    merkleRoot: "0x0000000000000000000000000000000000000000000000000000000000000000",
+    pricePerToken: BigNumber.from(1).mul(BigNumber.from(10).pow(18)) , 
+    currency1: careContract.address,
+    currency2: respectContract.address, 
+    currency3: responsibilityContract.address, 
+    currency4: knowledgeContract.address,
+    metadata: ""
+  };
 
+  await loveContract.setClaimConditions(loveClaimCondition, false);
+
+  // mint test gifts to deployer
+  await careContract.mintTo(deployer, 1);
+  await respectContract.mintTo(deployer, 1);
+  await responsibilityContract.mintTo(deployer, 1);
+  await knowledgeContract.mintTo(deployer, 1);
+
+  type AllowlistProofStruct = {
+    proof: PromiseOrValue<BytesLike>[];
+    quantityLimitPerWallet: PromiseOrValue<BigNumberish>;
+    pricePerToken: PromiseOrValue<BigNumberish>;
+    currency1: PromiseOrValue<string>;
+    currency2: PromiseOrValue<string>;
+    currency3: PromiseOrValue<string>;
+    currency4: PromiseOrValue<string>;
+  };
+
+  const allowListProof : AllowlistProofStruct =
+  {
+    proof: [],
+    quantityLimitPerWallet: UINT256_MAX,
+    pricePerToken: BigNumber.from(1).mul(BigNumber.from(10).pow(18)),
+    currency1: careContract.address,
+    currency2: respectContract.address,
+    currency3: responsibilityContract.address,
+    currency4: knowledgeContract.address,
+  }
+
+  // attempt to claim LOVE
+  await loveContract.claim(
+    deployer,                       //_receiver
+    1,                              //_quantity
+    careContract.address,           // _currency1
+    respectContract.address,        // _currency2
+    responsibilityContract.address, //_currency3
+    knowledgeContract.address,      // _currency4
+    BigNumber.from(1).mul(BigNumber.from(10).pow(18)),   // _pricePerToken
+    allowListProof,                 // _allowlistProof
+    []                              // _data
+    );
 
   // Get the deployed contract
   // const yourContract = await hre.ethers.getContract("YourContract", deployer);
