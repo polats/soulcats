@@ -12,6 +12,9 @@ const deployAndInitializeERCContracts: DeployFunction = async function (hre: Har
   const { deployer } = await hre.getNamedAccounts();
   const { deploy } = hre.deployments;
 
+  const UINT256_MAX = 
+  BigNumber.from("115792089237316195423570985008687907853269984665640564039457584007913129639935");
+
   // Deploy SoulCats - ERC721
   await deploy("SoulCats", {
     from: deployer,
@@ -30,7 +33,26 @@ const deployAndInitializeERCContracts: DeployFunction = async function (hre: Har
 
   const soulCatsContract = await hre.ethers.getContract("SoulCats", deployer);
 
+  const claimCondition = {
+    startTimestamp: 0, // Example value
+    maxClaimableSupply: UINT256_MAX, // Example value
+    supplyClaimed: 0, // Example value
+    quantityLimitPerWallet: UINT256_MAX, // Example value
+    merkleRoot: "0x0000000000000000000000000000000000000000000000000000000000000000", // Example value
+    pricePerToken: 0, // Example value
+    currency: "0x0000000000000000000000000000000000000000", // Example value
+    metadata: "" // Example value
+  };
+
+  await soulCatsContract.setClaimConditions(claimCondition, false);
+
+  // lazy mint some cats
+  const baseURI = "https://bafybeigffbj6neldyewn5vs445pk4qlav6m4rwevp5en22qrthkgumsa3e.ipfs.nftstorage.link/"
+  await soulCatsContract.lazyMint(
+    2000,baseURI, []);
+
   const GIFT_DATA = [
+
     {
       contractName: "Care",
       name: "CARE",
@@ -96,8 +118,6 @@ const deployAndInitializeERCContracts: DeployFunction = async function (hre: Har
 
   const loveContract = await hre.ethers.getContract("Love", deployer);
 
-  const UINT256_MAX = 
-  BigNumber.from("115792089237316195423570985008687907853269984665640564039457584007913129639935");
 
   // add LOVE claim condition
   const loveClaimCondition = {
