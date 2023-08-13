@@ -7,7 +7,7 @@ import {
   useScaffoldContractWrite,
   useGenerateArt
 } from "~~/hooks/scaffold-eth";
-import { ArrowSmallRightIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { ArrowSmallRightIcon } from "@heroicons/react/24/outline";
 import confetti from "canvas-confetti"
 import { useAccount } from "wagmi";
 
@@ -17,7 +17,7 @@ const Home: NextPage = () => {
   const [secondWord, setSecondWord] = useState("");
   const [soulcatName, setSoulCatName] = useState("");
 
-  const { data, loading, error, fetchData } = useGenerateArt(firstWord, secondWord)
+  const { data, loading, fetchData } = useGenerateArt(firstWord, secondWord)
 
   const allowListProof : any  =
   {
@@ -46,7 +46,7 @@ const Home: NextPage = () => {
 
 
   function starExplosion() {
-    var defaults = {
+    const defaults = {
       spread: 360,
       ticks: 50,
       gravity: 0,
