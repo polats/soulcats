@@ -5,7 +5,7 @@ export function useGenerateArt(x?: string, y?:string) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const PREFIX="http://localhost:3001/api/generate?x=";
+  const PREFIX="https://sd-simplify.soulcats.xyz/api/generate?x=";
 
   const fetchData = async () => {
     setLoading(true);
